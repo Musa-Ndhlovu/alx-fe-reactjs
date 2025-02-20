@@ -7,6 +7,7 @@ import MainContent from './components/MainContent'
 import Footer from './components/Footer'
 import UserProfile from './components/UserProfile'
 import WeclomeMessage from './components/WelcomeMessage'
+import Counter from './components/Counter'
 
 
   
