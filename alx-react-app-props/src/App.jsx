@@ -30,13 +30,14 @@ function App() {
   
     return <ProfilePage userData={userData} />;
   }
-}
+
 
 return (
   <UserContext.Provider value = {userData}>
     <profilePage />
   </UserContext.Provider>
-)
+);
+}
 
 export default App;
 
