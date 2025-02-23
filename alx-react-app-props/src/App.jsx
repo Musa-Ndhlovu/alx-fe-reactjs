@@ -12,6 +12,7 @@ import UserProfile from './components/UserProfile'
 import ProfilePage from './ProfilePage';
 import UserInfo from './UserInfo';
 import UserDetails from './UserDetails';
+import {UserContext} from './UserContext';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,12 @@ function App() {
     return <ProfilePage userData={userData} />;
   }
 }
+
+return (
+  <UserContext.Provider value = {userData}>
+    <profilePage />
+  </UserContext.Provider>
+)
 
 export default App;
 
