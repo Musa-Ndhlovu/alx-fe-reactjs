@@ -10,18 +10,19 @@ import Services from './Services'
 import Contact from './Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-  <Router>
-    <Routes>
-      <Route path ='/' element={<Home />} />
-      <Route path ='/' element={<About />} />
-      <Route path = '/' element={<Services />} />
-      <Route path ='/' element ={<Contact />} />
-    </Routes>
-  </Router>
-  );
+const [count, setCount] = useState(0)
+return( 
+<>
+<Router>
+  <Routes>
+    <Route path='/' element = {<Home />} />
+    <Route path='/' element = {<About />} />
+    <Route path='/' element = {<Services />} />
+    <Route path='/' element = {<Contact />} />
+  </Routes>
+</Router>
+</>
+)
 }
-
-export default App
+export default App;
