@@ -8,4 +8,3 @@ function UserDetails({ userData }) {
   }
   
   export default UserDetails;
-  

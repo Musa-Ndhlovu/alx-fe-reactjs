@@ -1,5 +1,4 @@
-const { createContext } = require("react");
+import {createContext} from "react";
 
-const UserContext = React.createContext()
-
+const MyContext = React.createContext;
 export default UserContext;
