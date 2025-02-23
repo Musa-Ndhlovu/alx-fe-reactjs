@@ -8,6 +8,7 @@ import Home from './Home'
 import About from './About'
 import Services from './Services'
 import Contact from './Contact'
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -20,6 +21,7 @@ return(
     <Route path='/' element = {<About />} />
     <Route path='/' element = {<Services />} />
     <Route path='/' element = {<Contact />} />
+    <Route path='/' element = {<Navbar />}/>
   </Routes>
 </Router>
 </>
