@@ -21,7 +21,6 @@ return(
     <Route path='/' element = {<About />} />
     <Route path='/' element = {<Services />} />
     <Route path='/' element = {<Contact />} />
-    <Route path='/' element = {<Navbar />}/>
   </Routes>
 </Router>
 </>
