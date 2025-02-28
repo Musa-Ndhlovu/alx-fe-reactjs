@@ -6,25 +6,30 @@ import './App.css'
 //zustand
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
-import recipeStore from './components/recipeStore' 
-
+import recipeStore from './components/recipeStore'
+import EditRecipeForm from './components/EditRecipeForm'
 
 //zustand
 import create from 'zustand'
 
-function App() {
-  const [count, setCount] = useState(0)
+//react router
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
- 
+const recipeDetails = () => <h1> Recipe Details</h1>;
 
-  return (
-    <>
-      <div>
-     
-      </div>
-      
-    </>
-  )
+
+const App = () => {
+return(
+  <Router>
+      <nav>
+        <Link to = "/recipeDetails">Recipe Details</Link>
+        <Link to = "/recipeList">Recipe List</Link>
+        <Link to = "/recipeStore">Recipe Store</Link>
+      </nav>
+  </Router>
+)
 }
+
+
 
 export default App
