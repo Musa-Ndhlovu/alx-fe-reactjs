@@ -1,5 +1,5 @@
 // RecipeList component
-import { recipeStore } from '../store/recipeStore';
+import { recipeStore } from './recipeStore';
 
 
 const RecipeList = () => {

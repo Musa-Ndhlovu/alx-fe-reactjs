@@ -6,7 +6,7 @@ import './App.css'
 //zustand
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
-import recipeStore from './store/recipeStore' 
+import recipeStore from './components/recipeStore' 
 
 
 //zustand
