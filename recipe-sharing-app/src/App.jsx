@@ -15,21 +15,21 @@ import create from 'zustand'
 //react router
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
-const recipeDetails = () => <h1> Recipe Details</h1>;
+const recipeDetails = () => <h1> Recipe Detail </h1>;
 
 
 const App = () => {
 return(
   <Router>
       <nav>
-        <Link to = "/recipeDetails">Recipe Detail</Link>
+        <Link to = "/recipeDetails">Recipe Detail </Link>
         <Link to = "/recipeList">Recipe List</Link>
         <Link to = "/recipeStore">Recipe Store</Link>
       </nav>
 
       <div>
         <Routes>
-          <Route path = "/recipeDetails" element = {<recipe Details />} /> 
+          <Route path = "/recipeDetails" element = {<recipe Detail />} /> 
           <Route path = "/recipeList" element = {<Recipe List />} /> 
           <Route path = "/recipeStore" element = {<Recipe Store />} />
         </Routes>
