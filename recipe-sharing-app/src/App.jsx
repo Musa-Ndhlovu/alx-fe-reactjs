@@ -29,7 +29,7 @@ return(
 
       <div>
         <Routes>
-          <Route path = "/recipeDetails" element = {<Recipe Detail />} /> 
+          <Route path = "/recipeDetails" element = {<Recipegit Detail />} /> 
           <Route path = "/recipeList" element = {<Recipe List />} /> 
           <Route path = "/recipeStore" element = {<Recipe Store />} />
         </Routes>
