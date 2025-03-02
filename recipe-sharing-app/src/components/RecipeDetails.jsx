@@ -3,7 +3,7 @@
 
  const RecipeDetails = ({ recipeDetails}) =>
       recipe = useRecipeStore (state => 
-        state.recipe.find(recipe => recipe.id === recipeDetails.Id)
+        state.recipe.find(recipe => recipe.id === recipeDetails.id)
     );
 
     if (!recipe) {
@@ -26,4 +26,4 @@
     );
 
 
-export  default RecipeDetails;
+export default RecipeDetail;
