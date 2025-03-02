@@ -2,8 +2,8 @@
  import { useRecipeStore } from './recipeStore';
 
  const RecipeDetails = ({ recipeDetails}) =>
-     recipe = useRecipeStore (state => 
-        state.recipe?.find(recipe => recipe.id === recipeDetails.id)
+      recipe = useRecipeStore (state => 
+        state.recipe.find(recipe => recipe.id === recipeDetails.Id)
     );
 
     if (!recipe) {
