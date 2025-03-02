@@ -18,4 +18,23 @@ const RecipeList = () => {
   );
 };
 
+const App = () => {
+  return(
+    <Router>
+        <nav>
+          <Link to = "/recipeDetails">Recipe Details</Link>
+          <Link to = "/recipeList">Recipe List</Link>
+          <Link to = "/recipeStore">Recipe Store</Link>
+        </nav>
+  
+        <div>
+          <Routes>
+            <Route path = "/recipeDetails" element = {<recipe Details />} /> 
+            <Route path = "/recipeList" element = {<Recipe List />} /> 
+            <Route path = "/recipeStore" element = {<Recipe Store />} />
+          </Routes>
+        </div>
+    </Router>
+  )
+  }
 export default RecipeList
