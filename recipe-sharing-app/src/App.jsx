@@ -8,6 +8,8 @@ import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import recipeStore from './components/recipeStore'
 import EditRecipeForm from './components/EditRecipeForm'
+import FavoritesList from './components/FavoritesList'
+import RecommendationsList from './components/RecommendationsList'
 
 //zustand
 import create from 'zustand'
