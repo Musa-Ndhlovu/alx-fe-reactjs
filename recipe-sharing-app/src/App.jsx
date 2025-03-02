@@ -24,7 +24,7 @@ const App = () => {
 return(
   <Router>
       <nav>
-        <Link to = "/recipeDetails">Recipe Detail </Link>
+        <Link to = "/recipeDetails">RecipeDetail </Link>
         <Link to = "/recipeList">Recipe List</Link>
         <Link to = "/recipeStore">Recipe Store</Link>
       </nav>
