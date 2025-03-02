@@ -1,21 +1,29 @@
 import {useState }from "react";
+import {useRecipeStore } from "./recipeStore";
 
-const EditRecipeForm = ({onSubmit}) => {
+const EditRecipeForm = ({recipeId, onSubmit}) => {
+  const {updateRecipe} = useRecipeStore();
+
+  
     const [RecipeDetails, AddRecipeForm] = useState ({
         name: '',
         email:'',
         message:'',
-    })
+    });
 
-    const handleChange = (e) => {
+    const handleChange = (event) => {
         RecipeDetails ({ ...RecipeDetails, [e.target.name]: e.target.value})
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         onSubmit(RecipeDetails);
     };
 
+    updateRecipe({id: recipeId, ...formData});
+    if (onSubmit) onSubmit();
+  };
+ 
     return (
         <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 border rounded-lg shadow-lg">
         <label className="block mb-2">
@@ -58,7 +66,7 @@ const EditRecipeForm = ({onSubmit}) => {
         </button>
       </form>
     );
-  };  
+  
 
   
  export default EditRecipeForm 
