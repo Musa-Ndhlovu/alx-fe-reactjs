@@ -24,6 +24,8 @@ const EditRecipeForm = ({recipeId, onSubmit}) => {
     if (onSubmit) onSubmit();
   };
  
+  function EditRecipeForm()  { 
+    <>
     return (
         <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 border rounded-lg shadow-lg">
         <label className="block mb-2">
@@ -66,7 +68,7 @@ const EditRecipeForm = ({recipeId, onSubmit}) => {
         </button>
       </form>
     );
-  
-
+  </>
+  };
   
  export default EditRecipeForm 
