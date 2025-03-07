@@ -14,25 +14,26 @@ const handleSubmit = (e) => {
     console.log('Username:', userNameRef.current.value);
     console.log('Email:', emailRef.current.value);  
     console.log('Password', passwordRef.current.value);
+    console.log(formData)
 };
 
 return(
     <form onSubmit = {handleSubmit}>
         <input 
         type = "text" 
-        value = {name}
+        value = {formData.name}
         ref={userNameRef} />
 
         <input 
         type = "email" 
         name ="email" 
-        value = {email}
+        value = {formData.email}
         ref={emailRef} />
 
         <input 
         type = "submit" 
         name="password" 
-        value = {password}
+        value = {formData.password}
         ref={passwordRef} />
     </form>
 );
