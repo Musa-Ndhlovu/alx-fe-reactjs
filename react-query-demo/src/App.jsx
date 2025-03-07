@@ -6,8 +6,8 @@ import './App.css'
 import { QueryClient, QueryClientProvider } from 'react-query';
 import react from "react";
 import { useQuery } from "react-query";
-import PostsComponent from '../PostsComponent';
-import formikForm from '../../form-handling-react/src/components/formikForm';
+import PostsComponent from './components/PostsComponent';
+
 
 const queryClient = new QueryClient();
 
@@ -21,4 +21,4 @@ function App() {
     );
   }
   
-export default App;
+export default App
