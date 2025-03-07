@@ -18,11 +18,22 @@ const handleSubmit = (e) => {
 
 return(
     <form onSubmit = {handleSubmit}>
-        <input type = "text" value="username" ref={userNameRef} />
+        <input 
+        type = "text" 
+        value = {name}
+        ref={userNameRef} />
 
-        <input type = "email" value="email" ref={emailRef} />
+        <input 
+        type = "email" 
+        name ="email" 
+        value = {email}
+        ref={emailRef} />
 
-        <input type = "submit" value="password" ref={passwordRef} />
+        <input 
+        type = "submit" 
+        name="password" 
+        value = {password}
+        ref={passwordRef} />
     </form>
 );
 
