@@ -15,7 +15,7 @@ const PostsComponent = () => {
         queryFn: fetchPosts,
         cacheTime: 1000 * 60 * 5, 
         staleTime: 1000 * 30,
-        refetechOnWindowFocus: true,
+        refetchOnWindowFocus: true,
         keepPreviousData: true,
     });
 
