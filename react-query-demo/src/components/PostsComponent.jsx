@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const fetchPosts = async () => {
     const response = await fetch ("https://jsonplaceholder.typicode.com/posts")
     if (! response.ok) {
-        throw new Error ("WAS NOT FOUND!")
+        throw new Error ("isError")
     }
     return response.json();
 };
