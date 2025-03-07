@@ -35,7 +35,7 @@ return (
             )
         )}
         </ul>
-        <button type = "button">Submit</button>
+         <button type = "button" onClick = {handleSubmit}> Submit</button>
     </div>
 )
 };
