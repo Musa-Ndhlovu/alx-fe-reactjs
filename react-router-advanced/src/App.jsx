@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import React from 'react'
-import {BrowserRoutes as Router, Routes, Route}
+import {BrowserRouter as Router, Routes, Route, Switch, Link}
 import Profile from './components/Profile'
 import ProfileDetails from './components/ProfileDetails'
 import ProfileSettings from './components/ProfileSettings'
@@ -21,6 +21,14 @@ const App = () => {
         <li><Link to = "ProfileSettings"></Link></li>
       </ul>
     </nav>
+
+    <Switch>
+
+      <Route path = "," components = {profile} />
+      <Route path = "/blog/:id" components = {ProfileDetails} />
+      <Route path = "BlogPost" components = {ProfileSettings} />
+    </Switch>
+
     </div>
   )
 
