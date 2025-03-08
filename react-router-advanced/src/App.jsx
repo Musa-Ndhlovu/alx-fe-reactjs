@@ -24,9 +24,9 @@ const App = () => {
 
     <Switch>
 
-      <Route path = "," components = {profile} />
-      <Route path = "/blog/:id" components = {ProfileDetails} />
-      <Route path = "BlogPost" components = {ProfileSettings} />
+      <Route path="," components = {profile} />
+      <Route path="/blog/:id" components = {ProfileDetails} />
+      <Route path="BlogPost" components = {ProfileSettings} />
     </Switch>
 
     </div>
