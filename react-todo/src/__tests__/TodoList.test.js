@@ -1,4 +1,5 @@
 import TodoList from "./TodoList";
+ import "@testing-library/jest-dom";
 
 test ("renders TodoList component with initial tasks", () => {
     render (<TodoList />);
