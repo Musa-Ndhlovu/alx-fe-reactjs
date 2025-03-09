@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {Formik, From, Field, ErrorMessage} from "formik"
+import * as Yup from "yup"
 
 const RegistrationForm = () => {
     const [username, setUsername] = useState("");
@@ -14,6 +16,17 @@ const RegistrationForm = () => {
       console.log({ username, email, password });
     };
   
+    const validateForm = (values) => {
+        let newErrors = {};
+    
+        if (!values.username) newErrors.username = "Username is required";
+        if (!values.email) newErrors.email = "Email is required";
+        if (!values.password) newErrors.password = "Password is required";
+    
+        setErrors(newErrors);
+        return newErrors;
+      };
+
     return (
       <form onSubmit={handleSubmit}>
         <div>
