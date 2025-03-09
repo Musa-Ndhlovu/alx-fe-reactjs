@@ -6,8 +6,8 @@ import './App.css'
 import TodoList from './components/TodoList'
 import AddTodoForm from './components/AddTodoForm'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = () => {
 
   return 
 
