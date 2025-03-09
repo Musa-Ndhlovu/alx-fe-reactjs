@@ -10,4 +10,17 @@ test ("renders TodoList component with initial tasks", () => {
     expect(screen.getByText(/Task 3/i)).toBeInTheDocument();
   });   
   
+  test("allows users to add a new task", () => {
+      render(<TodoList />);
+     
+      const input = screen.getByPlaceholderText(/add a new task/i);
+      const addButton = screen.getByText(/Add Task/i);
+    
+      fireEvent.change(input, { target: { value: "New Task" } });
+       
+      fireEvent.click(addButton);
+     
+      expect(screen.getByText(/New Task/i)).toBeInTheDocument();
+    });
+  
   export default TodoList.test
