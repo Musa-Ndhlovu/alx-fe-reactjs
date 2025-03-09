@@ -19,9 +19,9 @@ const RegistrationForm = () => {
     const validateForm = (values) => {
         let newErrors = {};
     
-        if (!values.username) newErrors.username = "Username is required";
-        if (!values.email) newErrors.email = "Email is required";
-        if (!values.password) newErrors.password = "Password is required";
+        if (!username) newErrors.username = "Username is required";
+        if (!email) newErrors.email = "Email is required";
+        if (!password) newErrors.password = "Password is required";
     
         setErrors(newErrors);
         return newErrors;
