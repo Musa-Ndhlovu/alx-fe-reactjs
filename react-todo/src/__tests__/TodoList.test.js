@@ -1,5 +1,5 @@
 import TodoList from "./TodoList";
- import "@testing-library/react";
+ import "@testing-library/react"
 
 test ("renders TodoList component with initial tasks", () => {
     render (<TodoList />);
