@@ -1,43 +1,48 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-    return <h1>Registration Form</h1>
-}
-
-const RegistationForm = () =>{
-    const userNameRef = useRef();
-    const  emailRef = useRef();
-    const passwordRef = useRef();
-
-const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Username:', userNameRef.current.value);
-    console.log('Email:', emailRef.current.value);  
-    console.log('Password', passwordRef.current.value);
-    console.log(formData)
-};
-
-return(
-    <form onSubmit = {handleSubmit}>
-        <input 
-        type = "text" 
-        value = {formData.name}
-        ref={userNameRef} />
-
-        <input 
-        type = "email" 
-        name ="email" 
-        value = {formData.email}
-        ref={emailRef} />
-
-        <input 
-        type = "submit" 
-        name="password" 
-        value = {formData.password}
-        ref={passwordRef} />
-    </form>
-);
-
- };
-
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (!username || !email || !password) {
+        alert("All fields are required!");
+        return;
+      }
+      console.log({ username, email, password });
+    };
+  
+    return (
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    );
+  };
+  
 export default RegistrationForm;
