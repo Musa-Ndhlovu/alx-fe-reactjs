@@ -8,9 +8,19 @@ const PrivateRoute = ({ component: Component, ...rest}) => (
             isAuthenticated() ? (
                 <component {...props} />
             ) : (
-                <Redirect to = "/login" />
+                <Redirect to = "/Profile" />
             )  
         }
     />
 );
 
+const ProtectedRoute = () => {
+    const handleProfile = () => {
+      localStorage.setItem ("useAuth", "Navigate");
+      window.location.href = '/profile';
+    };
+
+    return <button onClick = {handleSubmit}>Submit</button>;
+}
+
+export default ProtectedRoute;
