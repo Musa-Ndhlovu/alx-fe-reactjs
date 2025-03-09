@@ -7,6 +7,15 @@ const Todolist =  () => {
     return (
         <div>
             <h1>Todo List</h1>
+
+            <ul>
+                {lists.map((list, index) => (
+                    <li key = {index}>
+                        {task}
+                    </li>
+                )
+            )}
+            </ul>
         
         <input
         type = "checkbox"
