@@ -6,6 +6,7 @@ import './App.css'
 import UserProfile from './components/UserProfile'
 
 <UserProfile />
+
 function App() {
   const [count, setCount] = useState(0)
 
