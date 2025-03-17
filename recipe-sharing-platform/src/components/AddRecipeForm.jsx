@@ -4,6 +4,17 @@ const AddRecipeForm = ({onAddRecipe}) => {
     const [title, setTitle] = useState("");
     const [ingredients, setIngredients] = useState("");
     const [instructions, setInstructions] = useState(""); 
+    const [errors, setErrors] = useState({});
+
+
+    const validate = () => {
+        const newErrors = {};
+        if (!title.trim()) newErrors.title = "Title is required";
+        if (!ingredients.trim()) newErrors.ingredients = "Ingredients are required";
+        if (!instructions.trim()) newErrors.instructions = "Instructions are required";
+        return newErrors;
+      };
+      
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,6 +28,7 @@ const AddRecipeForm = ({onAddRecipe}) => {
 
 return 
     <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+         <ul className=" grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     <h2 className="text-2xl font-bold mb-4">Add a New Recipe</h2>
     <form onSubmit={handleSubmit} className="space-y-4">
    
@@ -62,4 +74,5 @@ return
 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
 
 </form>
+</ul>
 </div>

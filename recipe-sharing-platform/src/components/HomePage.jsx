@@ -17,7 +17,7 @@ const HomePage = () => {
         <div className="p-4">
             <h1 className="text-bold mb-4 text-xl">Recipe</h1>
 
-            <ul className=" grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <ul className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {recipe.map((recipe, index) => (
                     <li key={index} ClassName="mb-2 p-2 border rounded shadow hover:bg-blue-700">
                         <h2 className="text-md font-bold">{recipe.id}</h2>
