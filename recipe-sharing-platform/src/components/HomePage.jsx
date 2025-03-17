@@ -17,7 +17,7 @@ const HomePage = () => {
 
             <ul>
                 {recipe.map((recipe, index) => (
-                    <li key={index} ClassName="mb-2 p-2 border rounded">
+                    <li key={index} ClassName="mb-2 p-2 border rounded shadow hover:bg-blue-700">
                         <h2 className="text-md font-bold">{recipe.id}</h2>
                         <h3 className="text-md font-light">{recipe.summary}</h3>
                     </li>
