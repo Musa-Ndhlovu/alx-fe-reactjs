@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-Link
+import { Link, redirect, to } from "react-router-dom";
+Link to
 
 const HomePage = () => {
     const [recipe, setRecipe] = useState([]);
