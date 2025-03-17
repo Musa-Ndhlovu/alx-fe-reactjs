@@ -13,8 +13,6 @@ import HomePage from './components/HomePage';
 import RecipeDetail from './components/RecipeDetail';
 
 
-<HomePage />
-  
 function App() {
   const [count, setCount] = useState(0)
  
